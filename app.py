@@ -288,9 +288,12 @@ st.title("Liva Policy Checker")
 
 st.info("Data source: OneDrive (auto-fetched on each search)")
 
-# OneDrive fallback URL and helpers
-DEFAULT_ONEDRIVE_URL = https://curbplus141-my.sharepoint.com/:x:/g/personal/arhab_alrahbi_curbplus_co/IQAYIhvaSYUeSY6q3dwakG4LARfFIovfejSVgJs56FgZdt0?e=CReRW9&nav=MTVfezU5MjgyQzQwLTFBRUUtNDAxNC04NjZFLUNGRjUyRUIwRDQwRn0&download=1
-"
+DEFAULT_ONEDRIVE_URL = (
+    "https://curbplus141-my.sharepoint.com/:x:/g/personal/"
+    "arhab_alrahbi_curbplus_co/IQAYIhvaSYUeSY6q3dwakG4LARfFIovfejSVgJs56FgZdt0"
+    "?e=CReRW9&nav=MTVfezU5MjgyQzQwLTFBRUUtNDAxNC04NjZFLUNGRjUyRUIwRDQwRn0"
+    "&download=1"
+)
 
 def _force_download_param(url: str) -> str:
     # For SharePoint links, append &download=1 if not present
@@ -425,6 +428,7 @@ if go:
                     mime="text/csv",
                     type="secondary"
                 )
+
 
 
 
